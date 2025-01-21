@@ -283,3 +283,146 @@ button{
     margin-bottom: 10px;
 }
 
+.whychooseus-img{
+    width: 50%;
+    text-align: end;
+    position: relative;
+}
+
+.whychooseus-img:nth-child(2){
+    width: 80%;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.dots2{
+    position: absolute;
+    left: 0;
+    top: -80px;
+    z-index: 0;
+}
+
+.wehelp{
+    width: 100%;
+    background-color: #EFF2F1;
+}
+
+.wehelp-main{
+    padding: 80px 5%;
+    display: flex;
+}
+
+.wehelp-img{
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.wehelp-img :nth-child(1){
+    width: 60%;
+    height: 80%;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.wehelp-img :nth-child(2){
+    width: 30%;
+    height: 38%;
+    border-radius: 30px;
+    margin-left: 3%;
+}
+
+.wehelp-img :nth-child(3){
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 40%;
+    left: 40%;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+.wehelp-img :nth-child(4){
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    z-index: 0;
+}
+
+.wehelp-info{
+    width: 38%;
+    margin-left: 2%;
+}
+
+.wehelp-info h2{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.wehelp-info p{
+    font-size: 14px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.614);
+}
+
+.wehelp-info ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: circle;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.wehelp-info ul li{
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.popular-products{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 5%;
+    background-color: #EFF2F1;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.popular-product{
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-product-img{
+    width: 30%;
+    background-color: #dce5e4;
+    border-radius: 10%;
+}
+
+.popular-product-img img{
+    width: 100%;
+}
+
+.popular-product-info{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popular-product-info h3,
+.popular-product-info p{
+    color: #3b5d50;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.popular-product-info a:hover{
+    color: gray;
+}
