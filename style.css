@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Inter", "sans-serif";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -158,3 +158,128 @@ section{
     right: 0;
     z-index: 0;
 }
+
+.product-section{
+    width: 100%;
+    background-color: #eff3f1;
+}
+
+.product-main{
+    padding: 150px 5%;
+    display: flex;
+}
+
+.product-info{
+    width: 24%;
+    margin-right: 1%;
+}
+
+.product-info h3{
+    font-size: 14px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.738);
+    margin-bottom: 30px;
+}
+
+.product-info p{
+    font-size: 14px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.738);
+    margin-bottom: 30px;
+}
+
+button{
+    height: 50px;
+    padding: 0px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(42, 42, 42);
+    border: none;
+}
+
+.product-card{
+    width: 75%;
+    display: flex;
+}
+
+.product-item{
+    width: 32px;
+    text-align: center;
+    margin-right: 1%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.product-item:hover img{
+    transform: translateY(-20px);
+}
+
+.shopoverlay{
+    position: absolute;
+    height: 70px;
+    width: 100px;
+    background-color: #dce5e4;
+    border-radius: 5%;
+    bottom: -100%;
+    display: flex;
+    z-index: 0;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.product-item h3, h4{
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.whychooseus{
+    width: 100%;
+    background-color: #EFF2F1;
+}
+
+.whychooseus-main{
+    display: flex;
+    padding: 100px 5%;
+    justify-content: space-between;
+}
+
+.whychooseus-info{
+    width: 48px;
+    margin-right: 2%;
+}
+
+.whychooseus-info p{
+    font-size: 14px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.621);
+}
+
+.whychooseus-card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature{
+    width: 48%;
+}
+
+.feature-icon{
+    filter: drop-shadow(5px 5px 7px #3b5d50);
+}
+
+.feature mg{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.feature h3{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
