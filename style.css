@@ -153,7 +153,7 @@ section{
 }
 
 .product-info h3{
-    font-size: 14px;
+    font-size: 32px;
     line-height: 25px;
     color: rgba(0, 0, 0, 0.738);
     margin-bottom: 30px;
@@ -223,72 +223,84 @@ button{
     position: relative;
     z-index: 1;
 }
-
-.whychooseus{
+.whychooseus {
     width: 100%;
     background-color: #EFF2F1;
-}
-
-.whychooseus-main{
-    display: flex;
     padding: 100px 5%;
-    justify-content: space-between;
 }
 
-.whychooseus-info{
+.whychooseus-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.whychooseus-info {
     width: 48%;
     margin-right: 2%;
+    margin-top: -30px;
 }
 
-.whychooseus-info p{
+.whychooseus-info h2 {
+    font-size: 2rem; 
+    margin-bottom: 10px;
+}
+
+.whychooseus-info p {
     font-size: 14px;
     line-height: 25px;
     color: rgba(0, 0, 0, 0.621);
 }
 
-.whychooseus-card{
+.whychooseus-card {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-.feature{
+.feature {
     width: 48%;
 }
 
-.feature-icon{
+.feature-icon img {
+    width: 50px;
+    height: 50px;
     filter: drop-shadow(5px 5px 7px #3b5d50);
-}
-
-.feature mg{
-    margin-top: 40px;
     margin-bottom: 10px;
 }
 
-.feature h3{
+.feature h3 {
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.whychooseus-img{
-    width: 50%;
+.feature p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.whychooseus-img {
+    width: 48%;
+    position: relative;
     text-align: end;
-    position: relative;
 }
 
-.whychooseus-img:nth-child(2){
-    width: 80%;
-    border-radius: 30px;
-    position: relative;
-    z-index: 1;
-}
-
-.dots2{
+.whychooseus-img .dots2 img {
     position: absolute;
-    left: 0;
+    left: -20px;
     top: -80px;
     z-index: 0;
+    width: 100px;
+}
+
+.whychooseus-img .main-image {
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
 }
 
 .wehelp{
@@ -474,7 +486,7 @@ button{
 }
 
 .prev{
-    left: 5%;
+    right: 5%;
     top: 10%;
 }
 
