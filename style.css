@@ -22,7 +22,7 @@ header{
 }
 
 .logo{
-    font-size: 32;
+    font-size: 32px;
     font-weight: 700;
     color: #fff;
 }
@@ -105,6 +105,9 @@ section{
     padding: 0px 30px;
     border-radius: 30px;
     font-size: 18px;
+}
+.btns :hover{
+    color: #f9bf29;
 }
 .btns:nth-child(1){
     background-color: #f9bf29;
@@ -691,5 +694,181 @@ footer{
 .footer-bottom div :nth-child(1){
     margin-right: 20px;
 }
+.contact {
+    padding: 5%;
+    background: rgba(0, 0, 0, 0.409); 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 50%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-icons div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-icons i {
+    font-size: 20px;
+    color: #3b5d50;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: #3b5d50;
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #f9bf29;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input, textarea, button {
+    width: 100%;
+    border: 1px solid #3b5d50;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border-color: #3b5d50;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button:hover {
+    background: #3b5d50;
+}
+
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 1000;
+    width: 80%;
+}
 
 
+/* ============== TEAM SECTION STYLING ============== */
+.team {
+    padding: 50px 20px;
+    background: #fff; 
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.team h2 {
+    font-size: 36px;
+    color: #000; 
+    margin-bottom: 10px;
+}
+
+.team-description {
+    font-size: 16px;
+    color: #000; 
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.team-member {
+    background: #3b5d50; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.team-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    color: #ffffff; 
+    margin: 15px 0 5px;
+}
+
+.team-member .role {
+    font-size: 14px;
+    color: #9ca3af; 
+    font-style: italic;
+}
+
+.team-member .bio {
+    font-size: 14px;
+    color: #d1d5db;
+    padding: 0 15px 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.social-links a {
+    color: #f9bf29; 
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f9bf29; 
+}
