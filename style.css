@@ -426,3 +426,233 @@ button{
 .popular-product-info a:hover{
     color: gray;
 }
+
+.testimonials{
+    padding: 80px 5%;
+    background-color: #dce5e4;
+}
+
+.testimonials h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 500;
+    color: #000;
+}
+
+.testimonials-slide{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.testimonials-profile img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.testimonials-profile h4,
+.testimonials-profile p{
+    color: #3b5d50;
+    font-size: 15px;
+}
+
+.mySwiper{
+    position: relative;
+}
+
+.next,.prev{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: #73a592;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.prev{
+    left: 5%;
+    top: 10%;
+}
+
+.next{
+    left: 5%;
+    top: 10%;
+}
+
+.blog{
+    background-color: #EFF2F1;
+}
+
+.blog-main{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 5%;
+    padding-bottom: 200px;
+}
+
+.blog-head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.blog-head h2{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.blog-head a{
+    display: inline;
+    text-align: end;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.blog-main a:hover{
+    color: gray;
+}
+
+.blog-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog-card{
+    width: 32%;
+    margin-bottom: 50px;
+}
+
+.blog-card img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+.blog-card h4,
+.blog-card p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 80% 0px;
+}
+
+.Newsletter{
+    margin: 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Newsletter-form{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.311);
+    margin-bottom: 20px;
+}
+
+.Newsletter-form h3 span{
+    color: rgba(0, 0, 0, 0.721);
+}
+
+.Newsletter-form form{
+    display: flex;
+    align-items: center;
+}
+
+.Newsletter-form input{
+    height: 50px;
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.317);
+}
+
+.Newsletter-form button{
+    background-color: #3b5d50;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.Newsletter-img{
+    width: 40%;
+    position: absolute;
+    top: -200px;
+    right: 0;
+    text-align: right;
+}
+
+.Newsletter-img img{
+    width: 400px;
+}
+
+.footer-main{
+    margin: 0px 5%;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.409);
+}
+
+.footer-main h3{
+    font-size: 32px;
+    color: #3b5d50;
+    margin-bottom: 20px;
+}
+
+.footer-lists{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main-info{
+    width: 30%;
+    margin-right: 2%;
+}
+
+.footer-main-info p{
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-ions{
+    display: flex;
+}
+
+.footer-ions i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #3b5d50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: all 0.5s ease-in-out;
+} 
+
