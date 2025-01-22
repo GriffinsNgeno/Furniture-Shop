@@ -705,18 +705,19 @@ footer{
 
 .footer-bottom div :nth-child(1){
     margin-right: 20px;
-}
-.contact {
+}.contact {
     padding: 5%;
-    background: rgba(0, 0, 0, 0.409); 
+    background: #EFF2F1;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -30px;
 }
 
 .contact-form {
-    width: 50%;
+    margin-top: 50px;
+    width: 70%;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -794,7 +795,7 @@ button:hover {
 .menu.active {
     display: flex;
     flex-direction: column;
-    background-color: #333;
+    background-color: #3b5d50;
     padding: 10px;
     position: absolute;
     top: 60px;
@@ -804,7 +805,6 @@ button:hover {
 }
 
 
-/* ============== TEAM SECTION STYLING ============== */
 .team {
     padding: 50px 20px;
     background: #fff; 
@@ -885,7 +885,6 @@ button:hover {
     color: #f9bf29; 
 }
 
-/* ============== SERVICES SECTION STYLING ============== */
 .services {
     padding: 50px 20px;
     background: #f8fafc; 
@@ -942,7 +941,7 @@ button:hover {
 
 .service-item p {
     font-size: 16px;
-    color: #6b7280; /* Soft gray text */
+    color: #6b7280;
     line-height: 1.5;
 }
 
