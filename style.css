@@ -140,7 +140,7 @@ section{
     background-color: #eff3f1;
 }
 .product-main{
-    padding: 150px 5%;
+    padding: 5%;
     display: flex;
 }
 
@@ -228,7 +228,7 @@ button{
 
 .whychooseus-main{
     display: flex;
-    padding: 100px 5%;
+    padding: 5%;
     justify-content: space-between;
 }
 
