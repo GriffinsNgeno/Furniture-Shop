@@ -5,12 +5,10 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 body{
     width: 100%;
     overflow-x: hidden;
 }
-
 header{
     display: flex;
     justify-content: space-between;
@@ -28,25 +26,21 @@ header{
     font-weight: 700;
     color: #fff;
 }
-
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
-
 .menu li{
     padding: 0px 20px;
 }
-
 .menu li a{
     font-size: 18px;
     font-weight: 500;
     color: rgb(212, 212, 212);
     position: relative;
 }
-
 .menu li a::before{
     content: '';
     display: block;
@@ -59,24 +53,19 @@ header{
     transform-origin: right top;
     transition: all 0.2s ease-out;
 }
-
 .menu li .active:before{
     width: 100%;
 }
-
 .menu li a:active::before{
     background-color: #000;
 }
-
 .menu li a:hover::before{
     width: 100%;
 }
-
 .nav-icons i{
     padding: 0px 20px;
     color: #fff;
 }
-
 .bars{
     display: none;
 }
@@ -84,86 +73,72 @@ header{
 section{
     overflow-x: hidden;
 }
-
 .hero{
     background-color: #3b5d50;
     padding: 80px 5%;
     padding-bottom: 0;
 }
-
 .hero-main{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-
 .hero-info{
     width: 38%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .hero-info h1{
     font-size: 3.5rem;
     color: #fff;
     margin-bottom: 10px;
 }
-
 .hero-info p{
     color: rgba(255, 255, 255, 0.515);
     font-size: 15px;
     margin: 20px 0px;
     line-height: 30px;
 }
-
 .btns button{
     height: 50px;
     padding: 0px 30px;
     border-radius: 30px;
     font-size: 18px;
 }
-
 .btns:nth-child(1){
     background-color: #f9bf29;
     border: none;
     margin-right: 10px;
 }
-
 .btns:nth-child(2){
     background: transparent;
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.515);
     transition: all 0.5s ease-in-out;
 }
-
 .btns:nth-child(2):hover{
     border: 2px solid #fff;
 }
-
 .hero-img{
     width: 55%;
     position: relative;
 }
-
 .hero-img img{
     position: relative;
     width: 100%;
     z-index: 1;
 }
-
 .dots{
     position: absolute;
     top: 0;
     right: 0;
     z-index: 0;
 }
-
 .product-section{
     width: 100%;
     background-color: #eff3f1;
 }
-
 .product-main{
     padding: 150px 5%;
     display: flex;
@@ -204,7 +179,7 @@ button{
 }
 
 .product-item{
-    width: 32px;
+    width: 32%;
     text-align: center;
     margin-right: 1%;
     position: relative;
@@ -229,6 +204,16 @@ button{
     justify-content: center;
     transition: all 0.5s ease-in-out;
 }
+.shopoverlay i{
+    position: absolute;
+    bottom: -20px;
+    font-size: 40px;
+    color: rgb(57, 57, 57);
+}
+.product-item img{
+    width: 98%;
+    transition: all 0.5s ease-in-out;
+}
 
 .product-item h3, h4{
     margin-top: 20px;
@@ -248,7 +233,7 @@ button{
 }
 
 .whychooseus-info{
-    width: 48px;
+    width: 48%;
     margin-right: 2%;
 }
 
@@ -553,7 +538,7 @@ button{
 footer{
     background-color: #ffffff;
     width: 100%;
-    padding: 80% 0px;
+
 }
 
 .Newsletter{
@@ -598,7 +583,7 @@ footer{
 }
 
 .Newsletter-img{
-    width: 40%;
+    width: 30%;
     position: absolute;
     top: -200px;
     right: 0;
@@ -640,11 +625,11 @@ footer{
     margin-bottom: 20px;
 }
 
-.footer-ions{
+.footer-icons{
     display: flex;
 }
 
-.footer-ions i{
+.footer-icons i{
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -656,7 +641,7 @@ footer{
     transition: all 0.5s ease-in-out;
 } 
 
-.footer-ions i:hover{
+.footer-icons i:hover{
     background-color: #3b5d50;
     color: #fff;
 }
@@ -669,8 +654,7 @@ footer{
 
 .links1,
  .links2,
- .links3,
- .links4{
+ .links3{
     width: 24%;
 }
 
@@ -681,8 +665,7 @@ footer{
 
 .links1 ul li a,
 .links2 ul li a,
-.links3 ul li a,
-.links4 ul li a{
+.links3 ul li a{
     color: #3b5d50;
 }
 
@@ -706,3 +689,5 @@ footer{
 .footer-bottom div :nth-child(1){
     margin-right: 20px;
 }
+
+
