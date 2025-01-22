@@ -228,7 +228,7 @@ button{
 
 .whychooseus-main{
     display: flex;
-    padding: 5%;
+    padding: 100px 5%;
     justify-content: space-between;
 }
 
@@ -294,7 +294,7 @@ button{
 }
 
 .wehelp-main{
-    padding: 80px 5%;
+    padding: 5%;
     display: flex;
 }
 
@@ -643,15 +643,17 @@ footer{
 
 .footer-icons i:hover{
     background-color: #3b5d50;
-    color: #fff;
+    color: #f9bf29;
 }
 
 .links{
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 65%;
 }
-
+.links a:hover{
+    color: #f9bf29;
+}
 .links1,
  .links2,
  .links3{
