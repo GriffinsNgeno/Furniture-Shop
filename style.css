@@ -382,49 +382,80 @@ button{
     width: 40%;
     margin-bottom: 20px;
 }
-
-.popular-products{
+.popular-products {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
     padding: 50px 5%;
     background-color: #EFF2F1;
-    padding-bottom: 100px;
-    flex-wrap: wrap;
 }
 
-.popular-product{
-    width: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.popular-product-img{
+.popular-product {
     width: 30%;
-    background-color: #dce5e4;
-    border-radius: 10%;
-}
-
-.popular-product-img img{
-    width: 100%;
-}
-
-.popular-product-info{
-    width: 65%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.popular-product-info h3,
-.popular-product-info p{
+.popular-product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.popular-product-img {
+    width: 100%;
+    background-color: #dce5e4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.popular-product-img img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.popular-product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.popular-product-info h3 {
     color: #3b5d50;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.popular-product-info a:hover{
-    color: gray;
+.popular-product-info p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.popular-product-info a {
+    color: #3b5d50;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #3b5d50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.popular-product-info a:hover {
+    background: #3b5d50;
+    color: #fff;
 }
 
 .testimonials{
@@ -453,7 +484,7 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    margin-top: 20px;
 }
 
 .testimonials-profile img{
@@ -716,7 +747,7 @@ footer{
 }
 
 .contact-form {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 70%;
     background: #fff;
     border-radius: 10px;
