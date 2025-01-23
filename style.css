@@ -380,7 +380,8 @@ button{
 .wehelp-info ul li{
     width: 40%;
     margin-bottom: 20px;
-}.popular-products {
+}
+.popular-products {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
