@@ -1,36 +1,17 @@
-AOS.init()
+document.addEventListener('DOMContentLoaded', function () {
+    const bars = document.getElementById('bars');
+    const menu = document.getElementById('menu');
 
-let menu = document.querySelector('#menu')
-let bars = document.querySelector('#bars')
+    // Toggle the mobile menu when the hamburger icon is clicked
+    bars.addEventListener('click', function () {
+        menu.classList.toggle('active');
+    });
 
-bars.addEventListner('click', function (){ 
-    menu.classList.toogle('mobilemenu')
-})
-
-let swiper = new swiper('.myswiper', {
-    navigation:{
-        nextE1:'.next',
-        prevE1:'.prev',
-        autoplay:'.true',
-    },
-})
-
-let headings = document.querySelectorAll('#info')
-heading.forEach((item) => {
-
-    item.addEventListner('click', () => {
-        let para = item.nextElementsibling
-        para.classList.toogle('active')
-    })
-})
-
-let checkout = document.querySelector('#checkout')
-let from2 = document.querySelector('#from2')
-
-checkbox.addEventListner('click', () => {
-    if (checkbox){
-        from2.style.display = 'block'
-    } else {
-        from2.style.display = 'none'
-    }
-})
+    // Close the mobile menu when a link is clicked
+    const menuLinks = document.querySelectorAll('.menu li a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            menu.classList.remove('active'); // Hide the menu after clicking a link
+        });
+    });
+});
