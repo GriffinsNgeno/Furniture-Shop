@@ -193,25 +193,6 @@ button{
 .product-item:hover img{
     transform: translateY(-20px);
 }
-
-.shopoverlay{
-    position: absolute;
-    height: 70px;
-    width: 100px;
-    background-color: #dce5e4;
-    border-radius: 5%;
-    bottom: -100%;
-    display: flex;
-    z-index: 0;
-    justify-content: center;
-    transition: all 0.5s ease-in-out;
-}
-.shopoverlay i{
-    position: absolute;
-    bottom: -20px;
-    font-size: 40px;
-    color: rgb(57, 57, 57);
-}
 .product-item img{
     width: 98%;
     transition: all 0.5s ease-in-out;
