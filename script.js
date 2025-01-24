@@ -1,3 +1,4 @@
+AOS.init();
 document.addEventListener('DOMContentLoaded', function () {
     const bars = document.getElementById('bars');
     const menu = document.getElementById('menu');
