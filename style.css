@@ -16,7 +16,7 @@ header{
     height: 80px;
     padding: 0px 5%;
     background-color: #3b5d50;
-    position: fixed;
+    /* position: fixed; */
     width: 82.5%;
     z-index: 999;
 }
