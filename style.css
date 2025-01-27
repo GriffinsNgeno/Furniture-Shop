@@ -57,7 +57,7 @@ header{
     transition: all 0.2s ease-out;
 }
 .menu li .active:before{
-    width: 100%;
+    width: auto;
 }
 .menu li a:active::before{
     background-color: #000;
