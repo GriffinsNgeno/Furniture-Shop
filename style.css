@@ -16,8 +16,8 @@ header{
     height: 80px;
     padding: 0px 5%;
     background-color: #3b5d50;
-    /* position: fixed; */
-    width: 82.5%;
+    position: fixed;
+    width: 82%;
     z-index: 999;
 }
 
@@ -131,9 +131,11 @@ section{
     position: relative;
 }
 .hero-img img{
-    position: relative;
     width: 100%;
+    border-radius: 15px;
+    position: relative;
     z-index: 1;
+    height: 50%;
 }
 .dots{
     position: absolute;
