@@ -837,7 +837,6 @@ button:hover {
     color: #6b7280;
     line-height: 1.5;
 }
-
 /* ============== GENERAL RESPONSIVE STYLES ============== */
 @media (max-width: 1200px) {
     /* Adjustments for tablets and smaller desktops */
@@ -968,22 +967,51 @@ button:hover {
     /* Adjustments for mobile devices */
     .menu {
         display: none;
+        flex-direction: column;
+        background-color: #3b5d50;
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        z-index: 1000;
+        transition: transform 0.3s ease; /* Smooth slide-in transition */
+        transform: translateY(-100%); /* Initially hide the menu */
     }
 
-    .menu.active {
-        display: flex;
-    }
-
+    /* Show the hamburger icon */
     .bars {
         display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
     }
 
+    /* Style for active mobile menu */
+    .menu.active {
+        display: flex;
+        transform: translateY(0); /* Slide the menu down when active */
+    }
+
+    /* Adjust menu items for mobile */
+    .menu li {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 18px; /* Slightly larger font size for easier reading */
+    }
+
+    /* Remove padding from nav icons on mobile */
+    .nav-icons i {
+        padding: 0 10px;
+    }
+
+    /* Hero section adjustments for mobile */
     .hero-info h1 {
         font-size: 2rem;
     }
 
     .hero-info p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .product-info h3 {
@@ -1016,90 +1044,5 @@ button:hover {
 
     .links {
         width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    /* Adjustments for small mobile devices */
-    .hero-info h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-info p {
-        font-size: 10px;
-    }
-
-    .product-info h3 {
-        font-size: 20px;
-    }
-
-    .whychooseus-info h2 {
-        font-size: 1.2rem;
-    }
-
-    .wehelp-info h2 {
-        font-size: 20px;
-    }
-
-    .testimonials h2 {
-        font-size: 20px;
-    }
-
-    .footer-main h3 {
-        font-size: 20px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-bottom p {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .footer-bottom div {
-        text-align: center;
-    }
-}
-/* ============== HEADER RESPONSIVE STYLES ============== */
-@media (max-width: 768px) {
-    /* Hide the regular menu on mobile */
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #3b5d50;
-        position: absolute;
-        top: 80px; /* Adjust based on header height */
-        right: 0;
-        width: 100%;
-        padding: 10px;
-        z-index: 1000;
-    }
-
-    /* Show the hamburger icon */
-    .bars {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        color: #fff;
-    }
-
-    /* Style for active mobile menu */
-    .menu.active {
-        display: flex;
-    }
-
-    /* Adjust menu items for mobile */
-    .menu li {
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    /* Remove padding from nav icons on mobile */
-    .nav-icons i {
-        padding: 0 10px;
     }
 }
