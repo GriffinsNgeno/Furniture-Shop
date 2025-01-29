@@ -452,14 +452,14 @@ button{
 }
 
 .testimonials{
-    padding: 80px 5%;
+    padding: 30px 5%;
     background-color: #dce5e4;
 }
 
 .testimonials h2{
     font-size: 32px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 500;
     color: #000;
 }
@@ -478,18 +478,13 @@ button{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
-
-.testimonials-profile img{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
+    margin-bottom: 25px;
 }
 
 .testimonials-profile h4,
 .testimonials-profile p{
     color: #3b5d50;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .swiper-container{
