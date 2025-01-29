@@ -206,12 +206,6 @@ button{
     width: 98%;
     transition: all 0.5s ease-in-out;
 }
-
-.product-item h3, h4{
-    margin-top: 20px;
-    position: relative;
-    z-index: 1;
-}
 .whychooseus {
     width: 100%;
     background-color: #EFF2F1;
