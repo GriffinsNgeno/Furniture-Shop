@@ -9,7 +9,7 @@ body{
     width: 100%;
     overflow-x: hidden;
 }
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,61 +17,105 @@ header{
     padding: 0px 5%;
     background-color: #3b5d50;
     position: fixed;
-    width: 82%;
+    width: 84%;
     z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
+.logo {
     font-size: 29px;
     font-weight: 700;
     color: #fff;
 }
-.logo a{
-    color: #000;
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    transition: all 0.3s ease-in-out;
 }
-.menu li{
+
+.menu li {
     padding: 0px 20px;
 }
-.menu li a{
+
+.menu li a {
     font-size: 18px;
     font-weight: 500;
     color: rgb(212, 212, 212);
     position: relative;
+    text-decoration: none;
 }
-.menu li a::before{
+
+.menu li a::before {
     content: '';
     display: block;
     position: absolute;
-    bottom: -10px;
+    bottom: -5px;
     left: 0;
     height: 3px;
     width: 0%;
     background-color: #f9bf29;
     transform-origin: right top;
-    transition: all 0.2s ease-out;
+    transition: width 0.3s ease-out;
 }
-.menu li .active:before{
-    width: auto;
-}
-.menu li a:active::before{
-    background-color: #000;
-}
-.menu li a:hover::before{
+
+.menu li a.active::before,
+.menu li a:hover::before {
     width: 100%;
 }
-.nav-icons i{
+
+.menu li a.active {
+    color: #fff; /* Ensures the active link stands out */
+}
+
+.nav-icons i {
     padding: 0px 20px;
     color: #fff;
+    cursor: pointer;
 }
-.bars{
+
+.bars {
     display: none;
 }
+
+/* ============== Responsive Styles ============== */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #3b5d50;
+        width: 87%;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .bars {
+        display: block;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
 
 section{
     overflow-x: hidden;
@@ -129,13 +173,12 @@ section{
 .hero-img {
     width: 55%;
     position: relative;
-    /* Ensure the height of the container is based on the aspect ratio of the image */
     height: auto;
 }
 
 .hero-img img {
     width: 100%;
-    height: auto; /* Maintain the aspect ratio */
+    height: auto; 
     border-radius: 15px;
     position: relative;
     z-index: 1;
