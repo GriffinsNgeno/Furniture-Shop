@@ -73,9 +73,15 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav aria-label="Main navigation">
-        <div className={styles.logo}>
-          <Link href="/" onClick={handleLinkClick}>
-            StagexAfrica
+        <div className={styles.logoSection}>
+          <Link href="/" onClick={handleLinkClick} className={styles.logo}>
+            <div className={styles.logoIcon}>
+              <i className="fa-solid fa-tree" aria-hidden="true"></i>
+            </div>
+            <div className={styles.logoText}>
+              <span className={styles.logoMain}>StagexAfrica</span>
+              <span className={styles.logoSub}>Premium Timber Solutions</span>
+            </div>
           </Link>
         </div>
         
@@ -117,18 +123,16 @@ export default function Header() {
               className={pathname === "/contact" ? styles.active : ""}
               onClick={handleLinkClick}
             >
-              Contact Us
+              Contact
             </Link>
           </li>
         </ul>
-        
+
         <button 
-          className={`${styles.bars} ${menuOpen ? styles.active : ''}`}
-          id="bars" 
-          aria-label="Toggle menu" 
-          aria-expanded={menuOpen} 
-          aria-controls="menu" 
+          className={`${styles.bars} ${menuOpen ? styles.active : ""}`}
           onClick={handleMenuToggle}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <i className="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
