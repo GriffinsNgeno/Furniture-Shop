@@ -2,7 +2,6 @@
 .footer {
   background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
   color: white;
-  padding: 3rem 0 1.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -19,42 +18,32 @@
   pointer-events: none;
 }
 
-.Newsletter {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Main Footer Content */
+.footerMain {
+  padding: 2.5rem 0 1.5rem;
   position: relative;
   z-index: 1;
 }
 
-.NewsletterImg {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.NewsletterImg:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.footerMain {
+.footerContent {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  position: relative;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-.footerMain h3 {
+/* Company Info */
+.companyInfo {
+  grid-column: 1;
+}
+
+.logoSection h3 {
   font-size: 2rem;
   font-weight: 800;
-  text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
   background: linear-gradient(135deg, #F5DEB3 0%, #DEB887 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -62,99 +51,59 @@
   font-family: 'Nunito', sans-serif;
 }
 
-.footerLists {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footerMainInfo {
-  grid-column: 1;
-}
-
-.footerMainInfo p {
-  font-size: 1rem;
-  line-height: 1.6;
+.logoSection p {
+  font-size: 0.95rem;
   color: #F5DEB3;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
-  max-width: 400px;
   font-family: 'Nunito', sans-serif;
 }
 
-.footerIcons {
+.contactInfo {
   display: flex;
+  flex-direction: column;
   gap: 0.8rem;
-  margin-top: 1rem;
 }
 
-.footerIcons a {
+.contactItem {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(135deg, #CD853F 0%, #DEB887 100%);
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(205, 133, 63, 0.3);
-  position: relative;
-  overflow: hidden;
+  gap: 0.8rem;
+  color: #F5DEB3;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
 }
 
-.footerIcons a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #DEB887 0%, #F5DEB3 100%);
-  transition: left 0.3s ease;
+.contactItem i {
+  width: 16px;
+  color: #DEB887;
+  font-size: 1rem;
 }
 
-.footerIcons a:hover::before {
-  left: 0;
-}
-
-.footerIcons a:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(205, 133, 63, 0.4);
-}
-
-.footerIcons i {
-  font-size: 1.2rem;
-  position: relative;
-  z-index: 1;
-}
-
-.links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  grid-column: 2 / -1;
-}
-
-.links1, .links2, .links3 {
+/* Quick Links, Services */
+.quickLinks,
+.services {
   display: flex;
   flex-direction: column;
 }
 
-.links h4 {
-  font-size: 1.2rem;
+.quickLinks h4,
+.services h4,
+.socialSection h4 {
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #F5DEB3;
-  position: relative;
   font-family: 'Nunito', sans-serif;
+  position: relative;
 }
 
-.links h4::after {
+.quickLinks h4::after,
+.services h4::after,
+.socialSection h4::after {
   content: '';
   position: absolute;
-  bottom: -3px;
+  bottom: -0.3rem;
   left: 0;
   width: 25px;
   height: 2px;
@@ -162,214 +111,229 @@
   border-radius: 1px;
 }
 
-.links ul {
+.quickLinks ul,
+.services ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.links li {
+.quickLinks li,
+.services li {
   margin-bottom: 0.6rem;
 }
 
-.links a {
+.quickLinks a,
+.services a {
   color: #F5DEB3;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   position: relative;
-  padding: 0.2rem 0;
-  font-family: 'Nunito', sans-serif;
+  padding-left: 0;
 }
 
-.links a::before {
-  content: '';
+.quickLinks a::before,
+.services a::before {
+  content: '→';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: linear-gradient(135deg, #CD853F 0%, #DEB887 100%);
-  transition: width 0.3s ease;
+  left: -0.8rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #DEB887;
+  font-size: 0.8rem;
 }
 
-.links a:hover {
+.quickLinks a:hover,
+.services a:hover {
+  color: #DEB887;
+  padding-left: 0.8rem;
+}
+
+.quickLinks a:hover::before,
+.services a:hover::before {
+  opacity: 1;
+}
+
+/* Social Media */
+.socialSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   color: #F5DEB3;
-  transform: translateX(3px);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 222, 179, 0.2);
 }
 
-.links a:hover::before {
-  width: 100%;
+.socialLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #DEB887;
 }
 
+.socialLink i {
+  font-size: 1.1rem;
+}
+
+/* Footer Bottom */
 .footerBottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(245, 222, 179, 0.2);
   padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  position: relative;
-  z-index: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.footerBottom p {
-  color: #DEB887;
-  font-size: 0.9rem;
-  font-family: 'Nunito', sans-serif;
-}
-
-.footerBottom a {
+.copyright p {
   color: #F5DEB3;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
 }
 
-.footerBottom a:hover {
+.copyright a {
   color: #DEB887;
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.footerBottom div {
+.copyright a:hover {
+  color: #F5DEB3;
+}
+
+.legalLinks {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.footerBottom div a {
-  color: #DEB887;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-}
-
-.footerBottom div a:hover {
+.legalLinks a {
   color: #F5DEB3;
-  transform: translateY(-1px);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-family: 'Nunito', sans-serif;
+  transition: color 0.3s ease;
 }
 
-/* Enhanced Responsive Design */
+.legalLinks a:hover {
+  color: #DEB887;
+}
+
+/* Decorative Elements */
+.footerDecoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.woodGrain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #DEB887, transparent);
+  opacity: 0.3;
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
-  .footerLists {
+  .footerContent {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
 
-  .links {
+  .companyInfo {
     grid-column: 1 / -1;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .footer {
+  .footerMain {
     padding: 2rem 0 1rem;
   }
 
-  .footerMain {
-    padding: 0 1rem;
-  }
-
-  .footerMain h3 {
-    font-size: 1.8rem;
-  }
-
-  .footerLists {
+  .footerContent {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .footerMainInfo {
-    grid-column: 1;
-    text-align: center;
-  }
-
-  .footerMainInfo p {
-    max-width: none;
-  }
-
-  .footerIcons {
-    justify-content: center;
-  }
-
-  .links {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .links1, .links2, .links3 {
-    text-align: center;
-  }
-
   .footerBottom {
     flex-direction: column;
-    gap: 0.8rem;
     text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    gap: 0.8rem;
   }
 
-  .footerBottom div {
+  .socialIcons {
     justify-content: center;
-    gap: 0.8rem;
+  }
+
+  .legalLinks {
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .footerMain h3 {
-    font-size: 1.6rem;
+  .logoSection h3 {
+    font-size: 1.8rem;
   }
 
-  .footerIcons {
-    gap: 0.6rem;
+  .logoSection p {
+    font-size: 0.9rem;
   }
 
-  .footerIcons a {
-    width: 40px;
-    height: 40px;
+  .contactItem {
+    font-size: 0.85rem;
   }
 
-  .footerIcons i {
+  .socialLink {
+    width: 35px;
+    height: 35px;
+  }
+
+  .socialLink i {
     font-size: 1rem;
   }
 }
 
-/* Enhanced Animations */
-.footerMainInfo,
-.footerIcons,
-.links,
-.footerBottom {
-  animation: fadeInUp 0.6s ease-out;
-  animation-fill-mode: both;
-}
-
-.footerMainInfo { animation-delay: 0.1s; }
-.footerIcons { animation-delay: 0.2s; }
-.links { animation-delay: 0.3s; }
-.footerBottom { animation-delay: 0.4s; }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Enhanced Hover Effects */
-.footerMainInfo:hover,
-.links:hover {
+/* Hover Effects */
+.companyInfo:hover,
+.quickLinks:hover,
+.services:hover,
+.socialSection:hover {
   transform: translateY(-1px);
+  transition: transform 0.3s ease;
 }
 
-/* Enhanced Focus States */
-.footerIcons a:focus,
-.links a:focus,
-.footerBottom a:focus {
-  outline: 2px solid #CD853F;
+.socialLink:focus,
+.quickLinks a:focus,
+.services a:focus {
+  outline: 2px solid #DEB887;
   outline-offset: 2px;
 }
