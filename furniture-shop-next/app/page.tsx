@@ -23,8 +23,8 @@ export default function Home() {
             <h1>Welcome to Stagex Africa Limited</h1>
             <p>Your trusted partner in premium timber products and sustainable woodworking solutions.</p>
             <div className={styles.heroButtons}>
-              <button className={styles.primaryBtn}>Get Started</button>
-              <button className={styles.secondaryBtn}>Learn More</button>
+              {/* <button className={styles.primaryBtn}>Get Started</button>
+              <button className={styles.secondaryBtn}>Learn More</button> */}
             </div>
           </div>
           <div className={styles.heroImage} data-aos="fade-left" data-aos-duration="1000">
@@ -98,16 +98,16 @@ export default function Home() {
 
       {/* POPULAR PRODUCTS SECTION */}
       <section className={styles.popularProducts}>
-        <h2>Popular Products</h2>
+        <h2>Our Gallery</h2>
         <div className={styles.popularGrid}>
           {[1,2,3,4,5,6].map((num, idx) => (
             <div className={styles.popularCard} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={idx * 200} key={num}>
               <Image src={`/images/stageyafundi${num}.jpg`} alt="Popular Product" width={300} height={250} />
-              <div className={styles.popularCardContent}>
+              {/* <div className={styles.popularCardContent}>
                 <h3>Product {num}</h3>
                 <p>High-quality timber product crafted with precision</p>
                 <button>View Details</button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
