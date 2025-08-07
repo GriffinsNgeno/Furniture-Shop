@@ -6,75 +6,72 @@ import styles from "./Header.module.css";
 
 export default function Header() {
   const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      setScrolled(isScrolled);
+      setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleMenuToggle = () => {
-    const newMenuState = !menuOpen;
-    setMenuOpen(newMenuState);
-    
+  // Toggle mobile menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
     // Prevent body scroll when menu is open
-    if (newMenuState) {
+    if (!isMenuOpen) {
       document.body.style.overflow = 'hidden';
-      document.body.classList.add('menu-open');
     } else {
       document.body.style.overflow = 'unset';
-      document.body.classList.remove('menu-open');
     }
   };
 
-  const handleLinkClick = () => {
-    setMenuOpen(false);
+  // Close menu when clicking a link
+  const closeMenu = () => {
+    setIsMenuOpen(false);
     document.body.style.overflow = 'unset';
-    document.body.classList.remove('menu-open');
   };
 
   // Close menu on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && menuOpen) {
-        handleMenuToggle();
+      if (e.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+        document.body.style.overflow = 'unset';
       }
     };
 
-    if (menuOpen) {
+    if (isMenuOpen) {
       document.addEventListener('keydown', handleEscape);
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscape);
     };
-  }, [menuOpen]);
+  }, [isMenuOpen]);
 
   // Close menu on window resize
   useEffect(() => {
     const handleResize = () => {
-      if (menuOpen && window.innerWidth > 768) {
-        setMenuOpen(false);
+      if (isMenuOpen && window.innerWidth > 768) {
+        setIsMenuOpen(false);
         document.body.style.overflow = 'unset';
-        document.body.classList.remove('menu-open');
       }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [menuOpen]);
+  }, [isMenuOpen]);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <nav aria-label="Main navigation">
+      <nav className={styles.nav}>
+        {/* Logo Section */}
         <div className={styles.logoSection}>
-          <Link href="/" onClick={handleLinkClick} className={styles.logo}>
+          <Link href="/" onClick={closeMenu} className={styles.logo}>
             <div className={styles.logoIcon}>
               <i className="fa-solid fa-tree" aria-hidden="true"></i>
             </div>
@@ -84,14 +81,13 @@ export default function Header() {
             </div>
           </Link>
         </div>
-        
-        <ul className={`${styles.menu} ${menuOpen ? styles.active : ""}`} id="menu">
+
+        {/* Desktop Navigation */}
+        <ul className={styles.desktopMenu}>
           <li>
             <Link 
               href="/" 
-              aria-current={pathname === "/" ? "page" : undefined} 
               className={pathname === "/" ? styles.active : ""}
-              onClick={handleLinkClick}
             >
               Home
             </Link>
@@ -99,9 +95,7 @@ export default function Header() {
           <li>
             <Link 
               href="/about" 
-              aria-current={pathname === "/about" ? "page" : undefined} 
               className={pathname === "/about" ? styles.active : ""}
-              onClick={handleLinkClick}
             >
               About
             </Link>
@@ -109,9 +103,7 @@ export default function Header() {
           <li>
             <Link 
               href="/services" 
-              aria-current={pathname === "/services" ? "page" : undefined} 
               className={pathname === "/services" ? styles.active : ""}
-              onClick={handleLinkClick}
             >
               Services
             </Link>
@@ -119,23 +111,66 @@ export default function Header() {
           <li>
             <Link 
               href="/contact" 
-              aria-current={pathname === "/contact" ? "page" : undefined} 
               className={pathname === "/contact" ? styles.active : ""}
-              onClick={handleLinkClick}
             >
               Contact
             </Link>
           </li>
         </ul>
 
+        {/* Mobile Menu Button */}
         <button 
-          className={`${styles.bars} ${menuOpen ? styles.active : ""}`}
-          onClick={handleMenuToggle}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
+          className={`${styles.mobileMenuButton} ${isMenuOpen ? styles.active : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle mobile menu"
+          aria-expanded={isMenuOpen}
         >
-          <i className="fa-solid fa-bars" aria-hidden="true"></i>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
         </button>
+
+        {/* Mobile Navigation */}
+        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
+          <ul className={styles.mobileMenuList}>
+            <li>
+              <Link 
+                href="/" 
+                className={pathname === "/" ? styles.active : ""}
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/about" 
+                className={pathname === "/about" ? styles.active : ""}
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/services" 
+                className={pathname === "/services" ? styles.active : ""}
+                onClick={closeMenu}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/contact" 
+                className={pathname === "/contact" ? styles.active : ""}
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
   );
