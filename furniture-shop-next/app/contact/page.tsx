@@ -60,8 +60,7 @@ export default function Contact() {
             <div className={styles.contactCard}>
               <i className="fa-solid fa-location-dot" aria-hidden="true"></i>
               <h3>Address</h3>
-              <p>123 Woodcraft Lane</p>
-              <p>Timber City, TC 12345</p>
+              <p> Along Kericho-Mau Summit Road, 500m before Londiani Junction.</p>
             </div>
             
             <div className={styles.contactCard}>
