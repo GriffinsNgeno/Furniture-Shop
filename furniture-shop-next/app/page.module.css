@@ -1,0 +1,587 @@
+/* Enhanced Page Styles - Furniture Theme */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 100%);
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Responsive padding for different screen sizes */
+@media (max-width: 768px) {
+  .page {
+    padding-top: 70px; /* Smaller header on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 65px; /* Even smaller header on small mobile */
+  }
+}
+
+/* Hero Section */
+.hero {
+  min-height: calc(100vh - 80px); /* Subtract header height */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 70px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: calc(100vh - 65px);
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="wood" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="rgba(139,69,19,0.02)"/><path d="M0 0 L20 20 M20 0 L0 20" stroke="rgba(139,69,19,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23wood)"/></svg>');
+  opacity: 0.5;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heroText h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Nunito', sans-serif;
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  color: #5D4037;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroButtons button {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+  background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #8B4513;
+  border: 2px solid #8B4513;
+}
+
+.secondaryBtn:hover {
+  background: #8B4513;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.heroImage {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.heroImage img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.heroImage:hover img {
+  transform: scale(1.05);
+}
+
+/* Product Section */
+.products {
+  padding: 3rem 0;
+  background: white;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.productCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+  text-align: center;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.productCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.productCard h3 {
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.productCard p {
+  color: #5D4037;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Why Choose Us Section */
+.whyChooseUs {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
+}
+
+.whyChooseUs h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.whyChooseUsContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.whyChooseUsText h3 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.whyChooseUsText p {
+  color: #5D4037;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.whyChooseUsImage {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.whyChooseUsImage img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.whyChooseUsImage:hover img {
+  transform: scale(1.05);
+}
+
+/* We Help Section */
+.weHelp {
+  padding: 3rem 0;
+  background: white;
+}
+
+.weHelp h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.weHelpGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.helpCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.helpCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.helpCard i {
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.helpCard h3 {
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.helpCard p {
+  color: #5D4037;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Popular Products Section */
+.popularProducts {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
+}
+
+.popularProducts h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.popularGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.popularCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.popularCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.popularCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.popularCardContent {
+  padding: 1.5rem;
+}
+
+.popularCard h3 {
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.popularCard p {
+  color: #5D4037;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.popularCard button {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+}
+
+.popularCard button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+}
+
+/* Team Section */
+.team {
+  padding: 3rem 0;
+  background: white;
+}
+
+.team h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.teamCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.teamCard img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #8B4513;
+}
+
+.teamCard h3 {
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.teamCard p {
+  color: #5D4037;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  color: #8B4513;
+}
+
+.contactContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contactInfo h3 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contactInfo p {
+  color: #5D4037;
+  margin-bottom: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contactForm {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #D2B48C;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+  background: white;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: #8B4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+  transform: translateY(-1px);
+}
+
+.contactForm button {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.contactForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .whyChooseUsContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .productGrid,
+  .weHelpGrid,
+  .popularGrid,
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .contactForm {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroText h1 {
+    font-size: 2rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroButtons button {
+    width: 100%;
+    max-width: 250px;
+}
+
+  .contactForm {
+    padding: 1rem;
+  }
+}

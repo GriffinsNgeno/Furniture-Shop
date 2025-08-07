@@ -1,0 +1,278 @@
+/* Contact Page Styles - Furniture Theme */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 100%);
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Responsive padding for different screen sizes */
+@media (max-width: 768px) {
+  .page {
+    padding-top: 70px; /* Smaller header on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 65px; /* Even smaller header on small mobile */
+  }
+}
+
+/* Hero Section */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.heroText h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Nunito', sans-serif;
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  color: #5D4037;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+
+.heroImage {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.heroImage img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.heroImage:hover img {
+  transform: scale(1.05);
+}
+
+/* Contact Information */
+.contactInfo {
+  padding: 3rem 0;
+  background: white;
+}
+
+.contactInfo h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  color: #8B4513;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contactCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.contactCard i {
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.contactCard h3 {
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contactCard p {
+  color: #5D4037;
+  margin-bottom: 0.3rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Contact Form */
+.contactForm {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
+}
+
+.contactForm h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  color: #8B4513;
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  color: #8B4513;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 1rem;
+  border: 2px solid #D2B48C;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+  background: white;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #8B4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+  transform: translateY(-1px);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+}
+
+/* Map Section */
+.mapSection {
+  padding: 3rem 0;
+  background: white;
+}
+
+.mapSection h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Nunito', sans-serif;
+  color: #8B4513;
+}
+
+.map {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.map iframe {
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroText h1 {
+    font-size: 2rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+
+  .contactCard {
+    padding: 1.5rem;
+  }
+
+  .form {
+    padding: 1rem;
+  }
+}

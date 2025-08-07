@@ -1,0 +1,498 @@
+/* About Page Styles - Furniture Theme */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 100%);
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 65px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(160, 82, 45, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.heroText h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Nunito', sans-serif;
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  color: #5D4037;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+}
+
+.statNumber {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #8B4513;
+  font-family: 'Nunito', sans-serif;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.9rem;
+  color: #5D4037;
+  font-family: 'Nunito', sans-serif;
+}
+
+.heroImage {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.heroImage img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.heroImage:hover img {
+  transform: scale(1.05);
+}
+
+/* Mission Section */
+.mission {
+  padding: 4rem 0;
+  background: white;
+}
+
+.missionContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.missionText {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.missionText h2 {
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.missionText p {
+  font-size: 1.2rem;
+  color: #5D4037;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+
+.missionCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.missionCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.missionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.missionCard i {
+  font-size: 3rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.missionCard h3 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.missionCard p {
+  color: #5D4037;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Team Section */
+.team {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
+}
+
+.team h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.teamDescription {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #5D4037;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Nunito', sans-serif;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.teamCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.teamImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.teamImage img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.teamOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(139, 69, 19, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover .teamOverlay {
+  opacity: 1;
+}
+
+.teamCard:hover .teamImage img {
+  transform: scale(1.1);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8B4513;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  background: #8B4513;
+  color: white;
+  transform: scale(1.1);
+}
+
+.teamInfo {
+  padding: 1.5rem;
+}
+
+.teamInfo h3 {
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.role {
+  color: #A0522D;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.bio {
+  color: #5D4037;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contact {
+  color: #8B4513;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Values Section */
+.values {
+  padding: 4rem 0;
+  background: white;
+}
+
+.values h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 3rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.valueCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.valueCard i {
+  font-size: 3rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.valueCard h3 {
+  color: #8B4513;
+  margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.valueCard p {
+  color: #5D4037;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 3rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.galleryItem {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.1);
+}
+
+.galleryOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(139, 69, 19, 0.9));
+  color: white;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover .galleryOverlay {
+  transform: translateY(0);
+}
+
+.galleryOverlay h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.galleryOverlay p {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .heroStats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .missionCards {
+    grid-template-columns: 1fr;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroText h1 {
+    font-size: 2rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+
+  .missionText h2,
+  .team h2,
+  .values h2,
+  .gallery h2 {
+    font-size: 2rem;
+  }
+
+  .teamCard,
+  .valueCard,
+  .missionCard {
+    padding: 1.5rem;
+  }
+}
