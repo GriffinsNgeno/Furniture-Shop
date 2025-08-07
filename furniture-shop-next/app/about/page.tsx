@@ -28,7 +28,7 @@ export default function About() {
                 <span className={styles.statLabel}>Years Experience</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>500+</span>
+                <span className={styles.statNumber}>200+</span>
                 <span className={styles.statLabel}>Projects Completed</span>
               </div>
               <div className={styles.stat}>
@@ -199,10 +199,10 @@ export default function About() {
           {[1,2,3,4,5,6].map((num, idx) => (
             <div className={styles.galleryItem} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={idx * 100} key={num}>
               <Image src={`/images/stageyafundi${num}.jpg`} alt="Our Work" width={300} height={250} />
-              <div className={styles.galleryOverlay}>
+              {/* <div className={styles.galleryOverlay}>
                 <h3>Project {num}</h3>
                 <p>Custom woodworking excellence</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
