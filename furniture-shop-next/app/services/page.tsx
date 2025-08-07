@@ -60,7 +60,7 @@ export default function Services() {
               <li>Living Room Pieces</li>
               <li>Office Furniture</li>
             </ul>
-            <button className={styles.serviceBtn}>Learn More</button>
+            {/* <button className={styles.serviceBtn}>Learn More</button> */}
           </div>
 
           <div className={styles.serviceCard} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -75,7 +75,7 @@ export default function Services() {
               <li>Oak</li>
               <li>Eucalyptus</li>
             </ul>
-            <button className={styles.serviceBtn}>Learn More</button>
+            {/* <button className={styles.serviceBtn}>Learn More</button> */}
           </div>
 
           <div className={styles.serviceCard} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
@@ -90,7 +90,7 @@ export default function Services() {
               <li>Finishing & Staining</li>
               <li>Installation</li>
             </ul>
-            <button className={styles.serviceBtn}>Learn More</button>
+            {/* <button className={styles.serviceBtn}>Learn More</button> */}
           </div>
 
           <div className={styles.serviceCard} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
@@ -105,7 +105,7 @@ export default function Services() {
               <li>Storage Solutions</li>
               <li>Custom Shelving</li>
             </ul>
-            <button className={styles.serviceBtn}>Learn More</button>
+            {/* <button className={styles.serviceBtn}>Learn More</button> */}
           </div>
 
           <div className={styles.serviceCard} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
@@ -120,7 +120,7 @@ export default function Services() {
               <li>Custom Designs</li>
               <li>Premium Finishes</li>
             </ul>
-            <button className={styles.serviceBtn}>Learn More</button>
+            {/* <button className={styles.serviceBtn}>Learn More</button> */}
           </div>
 
           <div className={styles.serviceCard} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
@@ -135,7 +135,7 @@ export default function Services() {
               <li>Framing Materials</li>
               <li>Decking</li>
             </ul>
-            <button className={styles.serviceBtn}>Learn More</button>
+            {/* <button className={styles.serviceBtn}>Learn More</button> */}
           </div>
         </div>
       </section>
